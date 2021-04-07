@@ -12,13 +12,17 @@ import { booksReducer } from './state/books.reducer';
 import { collectionReducer } from './state/collection.reducer';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookCollectionComponent } from './book-collection/book-collection.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent, MyCounterComponent, BookListComponent, BookCollectionComponent
   ],
   imports: [
-    BrowserModule, StoreModule.forRoot({ count: counterReducer, collection: collectionReducer }), NgbModule, BsDropdownModule,
-    AppRoutingModule
+    BrowserModule, StoreModule.forRoot({
+      count: counterReducer,
+      books: booksReducer, collection: collectionReducer
+    }), NgbModule, BsDropdownModule,
+    AppRoutingModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
