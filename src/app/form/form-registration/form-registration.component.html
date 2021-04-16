@@ -1,0 +1,11 @@
+<div [@routerTransition] [formGroup]="formRegister">
+  <mat-form-field class="d-inline">
+        <mat-label>Lớp</mat-label>
+        <mat-select formControlName="class">
+            <mat-option *ngFor="let item of classData" [value]="item.id">{{item.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <section class="example-section">
+        <mat-checkbox class="example-margin" formControlName="isAgreed" (change)="updateForm(formRegister.getRawValue())">Xác nhận đồng ý đăng ký lớp.</mat-checkbox>
+      </section>
+</div>

@@ -1,0 +1,50 @@
+<h3>Đăng ký khóa học Front end</h3>
+
+<mat-card>
+<div class="row">
+  <div class="col-3">
+    <mat-list role="list">
+      <mat-list-item class="mb-1" role="listitem">
+        <a routerLink="./general" class="example-ripple-container mat-elevation-z4"
+          matRipple
+          [matRippleCentered]="false"
+          [matRippleDisabled]="false"
+          [matRippleUnbounded]="false"
+          >
+        Thông tin chung
+      </a>
+      </mat-list-item>
+      <mat-list-item class="my-2" role="listitem">
+        <a routerLink="./detail" class="example-ripple-container mat-elevation-z4"
+          matRipple
+          [matRippleCentered]="false"
+          [matRippleDisabled]="false"
+          [matRippleUnbounded]="false"
+          >
+          Thông chi tiết
+        </a>
+      </mat-list-item>
+    <mat-list-item class="mt-1" role="listitem">
+      <a routerLink="./registration" class="example-ripple-container mat-elevation-z4"
+          matRipple
+          [matRippleCentered]="false"
+          [matRippleDisabled]="false"
+          [matRippleUnbounded]="false"
+          >
+          Đăng ký lớp học
+        </a>
+    </mat-list-item>
+        </mat-list>
+      </div>
+  <div class="col-9">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+      <button mat-raised-button color="primary" class="float-right" [disabled]="!isAgreed">Đăng ký</button>
+  </div>
+</div>
+
+</mat-card>

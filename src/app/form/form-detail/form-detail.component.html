@@ -1,0 +1,17 @@
+<div [@routerTransition] [formGroup]="formDetail">
+    <mat-form-field >
+        <mat-label>Ngày sinh</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="d-inline">
+        <mat-label>Số CMND</mat-label>
+        <input matInput formControlName="identityCard">
+    </mat-form-field>
+    <mat-form-field class="d-inline">
+        <mat-label>Địa chỉ</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+    </mat-form-field>
+</div>
+
